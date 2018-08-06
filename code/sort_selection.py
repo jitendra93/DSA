@@ -1,31 +1,34 @@
-passes = swaps = 0
+
 a = [3,53,632,3,52,35,23]
-print(a)
-# temporary variable to store the position of minimum element
-pos_of_minimum = 0
 
-for i in range(0,len(a)):
-    #assuming the first element to be the minimum of the unsorted array .
-    pos_of_minimum = i
+def selection_sort(a):
+    passes = swaps = 0
+    print(a)
+    # temporary variable to store the position of minimum element
+    pos_of_minimum = 0
 
-    # the effective size of array is i+1 to len(a)
-    for j in range(i+1,len(a)):
-        passes = passes + 1
-        if(a[j]<a[pos_of_minimum]): #finds the minimum element
-            pos_of_minimum = j
+    for i in range(0,len(a)):
+        #assuming the first element to be the minimum of the unsorted array .
+        pos_of_minimum = i
 
-    if( i != pos_of_minimum):
-        swaps = swaps + 1
-        #putting minimum element on its proper position.
-        temp = a[i]
-        a[i] = a[pos_of_minimum]
-        a[pos_of_minimum] = temp
-    print("loop number",i,a)
-print(a)
+        # the effective size of array is i+1 to len(a)
+        for j in range(i+1,len(a)):
+            passes = passes + 1
+            if(a[j]<a[pos_of_minimum]): #finds the minimum element
+                pos_of_minimum = j
 
-print ("passes = ",passes)
-print("swaps = ",swaps)
+                if( i != pos_of_minimum):
+                    swaps = swaps + 1
+                    #putting minimum element on its proper position.
+                    temp = a[i]
+                    a[i] = a[pos_of_minimum]
+                    a[pos_of_minimum] = temp
+                    print("loop number",i,a)
+                    print(a)
 
+    print ("passes = ",passes)
+    print("swaps = ",swaps)
+selection_sort(a)
 
 '''
 [3, 53, 632, 3, 52, 35, 23]
