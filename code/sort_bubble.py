@@ -18,3 +18,16 @@ for i in range(0,len(a)):
      print("Actual swaps = ",swap)
      break
 print("total passes = ",passes)
+
+
+'''
+2 [2, 53, 23, 52, 56]
+53 [2, 53, 23, 52, 56]
+53 [2, 23, 53, 52, 56]
+53 [2, 23, 52, 53, 56]
+2 [2, 23, 52, 53, 56]
+23 [2, 23, 52, 53, 56]
+52 [2, 23, 52, 53, 56]
+Actual swaps =  2
+total passes =  7
+'''
